@@ -13,4 +13,8 @@ export class PaginatorComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  nextPage() {
+    console.log('zzzzzzzzzzzzz')
+  }
+
 }

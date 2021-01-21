@@ -8,14 +8,16 @@ import { PaginatorComponent } from './paginator/paginator.component';
 import { NewsComponent } from './news/news.component';
 import {NewsService} from './news/news.service';
 import { HttpClientModule } from '@angular/common/http';
-import { MaterialAppModule } from './ngmaterials.module'
+import { MaterialAppModule } from './ngmaterials.module';
+import {FilterPipe} from './filter.pipe'
 
 @NgModule({
   declarations: [
     AppComponent,
     InputSeachComponent,
     PaginatorComponent,
-    NewsComponent
+    NewsComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

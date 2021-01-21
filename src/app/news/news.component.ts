@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {NewsService} from './news.service'
+
 // import {INewsServerResponse} from './news-server-response.interface'
 // import { first } from 'rxjs/operators';
 

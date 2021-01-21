@@ -1,19 +1,16 @@
-<div *ngFor="let onenew of newsCards">
-  <mat-card class ="home-card">
-    <mat-card class="example-card">
-      <mat-card-header>
-        <mat-card-title>{{ onenew.title }}</mat-card-title>
-        <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-      </mat-card-header>
-      <img mat-card-image src='onenew.urlToImage'>
-      <mat-card-content>
-        <p>
-          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-          A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-          bred for hunting.
-        </p>
-      </mat-card-content>
-    </mat-card>
-</div>>
-
+<!-- <input matInput placeholder="Just a placeholder" type="text" [(ng-model)]='search' /> -->
+ <mat-card class="example-card news-container"
+  *ngFor="let card of (newsCards | filter: search:title)">
+    <mat-card-header>
+      <mat-card-title>{{ card.title }}</mat-card-title>
+    </mat-card-header>
+    <a [href]="card.url">
+      <img class="card-image" mat-card-image [src]='card.urlToImage'>
+    </a>
+    <mat-card-content>
+      <p>
+        {{card.description}}
+      </p>
+    </mat-card-content>
+  </mat-card>
 

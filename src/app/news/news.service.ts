@@ -14,10 +14,12 @@ export class NewsService {
     return this.http.get<INewsServerResponse>('http://newsapi.org/v2/everything?domains=wsj.com&apiKey=58c134fe78964feab6df1258b4430e93')
     .pipe(map((response:any)=>{
       const newsArray = response.articles.map(el=>{
-
         return {
           title: el.title,
-          urlToImage:el.urlToImage,
+          author: el.author,
+          url: el.url,
+          urlToImage: el.urlToImage,
+          description: el.description
         }
       })
     return newsArray}))
